@@ -1,0 +1,168 @@
+.total{
+    background: linear-gradient(to bottom, #d8f5ff, #0d498a);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+}
+
+.caixa-signup{
+    background-color: #FFFFFF80;
+    width: 27%;
+    height: 73%;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   
+    
+}
+
+.frases{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+   
+   
+}
+
+.frases p{
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+#meeting{
+    font-size: 1.2rem;
+
+}
+
+#signup{
+    font-size: 0.9rem;
+    font-weight: 350;
+    color: rgb(72, 72, 72);
+    
+}
+
+.linha-caixa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+.linha{
+    border-bottom: 1px solid #a4a2a2;
+    width: 70%;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+
+}
+
+
+.formulario p {
+    padding-left: 218px;
+    padding-bottom: 1px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #0c3d72;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.senha{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input{
+    border-radius: 10px;
+    border: 1px solid rgb(200, 198, 198);
+    padding-top: 10px;
+    background-color: #ecebebad;
+}
+
+
+
+label{
+    font-weight: 500;
+    color: rgb(61, 61, 61);
+}
+
+
+
+
+
+
+button{
+    background: linear-gradient(45deg, #207bb8, #6ebdf2);
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  
+
+  button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5), transparent 70%);
+      transform: rotate(-30deg);
+      opacity: 0;
+      animation: shine 2s linear  infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+
+    .formulario2{
+        display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+   
+    }
+
+
+#botao_log{
+    cursor: pointer;
+}
+
+#botao_cad{
+    cursor:pointer;
+}

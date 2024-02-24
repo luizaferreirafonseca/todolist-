@@ -1,0 +1,78 @@
+
+<div class="total">
+    <div *ngIf="mostrarFormularioLogin" class="caixa-signup">
+        <div class="frases">
+            <h2>TaskUp</h2>
+            <p id="meeting">Nice to have you here!</p>
+            
+        </div>
+        <div class="linha-caixa">
+            <div class="linha"></div>
+            <p id="signup">Don't have an account? <a class="cadastrar" id="botao_cad" (click)="exibirFormularioCadastro()">Sign up.</a></p>
+            </div>
+        
+
+        <div class="caixa-formulario">
+           <form [formGroup]="loginForm" class="formulario">
+                <div class="email">
+                <label>E-mail</label>
+                <input type="email" formControlName="email" placeholder="Digite seu email"  required>
+                </div>
+
+                <div class="senha">
+                <label>Password</label>
+                <input type="password" placeholder="**********" formControlName="senha">
+                </div>
+                
+
+                <p><u>Forgot my password</u></p>
+                
+
+                <button (click)="onSubmit()" type="submit">Sign in</button>
+           </form>
+        </div>
+    </div>
+
+
+    <div *ngIf="mostrarFormularioCadastro" class="caixa-signup">
+        <div class="frases">
+            <h2>TaskUp</h2>
+            <p id="meeting">Nice to have you here!</p>
+            
+        </div>
+        <div class="linha-caixa">
+            <div class="linha"></div>
+            <p id="signup">Create your account or <a class="cadastrar" id="botao_log" (click)="exibirFormularioLogin()">Log in.</a></p>
+            </div>
+        
+
+        <div class="caixa-formulario">
+           <form class="formulario2">
+
+            <div class="email">
+                <label>Nome</label>
+                <input type="name">
+                </div>
+
+            <div class="email">
+            <label>E-mail</label>
+            <input type="email">
+            </div>
+
+            <div class="senha">
+            <label>Password</label>
+            <input type="password">
+            </div>
+
+            <button type="submit">Register</button>
+           </form>
+        </div>
+    </div>
+
+
+
+
+
+
+   
+</div>

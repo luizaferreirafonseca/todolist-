@@ -1,0 +1,147 @@
+
+
+
+<div class="corpo">
+    <app-navbar></app-navbar>
+   
+
+    <div class="total-content">
+
+
+        <div class="imagem-buttons">
+                <img src="/assets/peoplew.png">
+                <div class="buttons">
+                    <button class="botoes_gerenciador">Customize</button>
+                    <button class="botoes_gerenciador">Your profile</button>
+                    <button class="botoes_gerenciador">Ask!</button>    
+                </div>
+        </div>
+
+        <div class="formAndtable">
+
+            <div class="total" *ngIf="showCreateForm">
+                <div class="task-form">
+                    <p>Schedule your tasks</p>
+                    <form action="#" method="post" [formGroup]="formulario">
+                        <label for="taskName">Nome da Tarefa:</label>
+                        <input type="text" formControlName="nomeTarefa" id="taskName" name="taskName" required>
+
+                        <label for="startDate">Data de Início:</label>
+                        <input type="date" formControlName="dataInicio" id="startDate" name="startDate">
+
+                        <label for="endDate">Data de Término:</label>
+                        <input type="date" formControlName="dataTermino" id="endDate" name="endDate">
+
+                        <!-- <label for="startTime">Horário de Início:</label>
+                        <input type="time" formControlName="dataInicio" id="startTime" name="startTime">
+
+                        <label for="endTime">Horário de Término:</label>
+                        <input type="time" formControlName="dataTermino" id="endTime" name="endTime"> -->
+
+                        <label for="taskDescription">Descrição da Tarefa:</label>
+                        <textarea id="taskDescription" formControlName="descricao" name="taskDescription" rows="3"></textarea>
+
+                        <button type="submit" (click)="postNewTask()">Criar Tarefa</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+                <div class="total" *ngIf="updateForm">
+                    <div class="task-form">
+                        <p>Edite sua tarefa</p>
+                        <form action="#" method="post" [formGroup]="formulario2">
+                            <label for="taskName">Nome da Tarefa:</label>
+                            <input type="text" formControlName="nomeTarefa" id="taskName" name="taskName" required>
+
+                            <label for="startDate">Data de Início:</label>
+                            <input type="date" formControlName="dataInicio" id="startDate" name="startDate">
+
+                            <label for="endDate">Data de Término:</label>
+                            <input type="date" formControlName="dataTermino" id="endDate" name="endDate">
+
+                            <!-- <label for="startTime">Horário de Início:</label>
+                            <input type="time" formControlName="dataInicio" id="startTime" name="startTime">
+
+                            <label for="endTime">Horário de Término:</label>
+                            <input type="time" formControlName="dataTermino" id="endTime" name="endTime"> -->
+
+                            <label for="taskDescription">Descrição da Tarefa:</label>
+                            <textarea id="taskDescription" formControlName="descricao" name="taskDescription" rows="4"></textarea>
+                            
+                            <div class="botoes">
+                                <button>Alterar tarefa</button>
+                                <button (click)="removeTarefa(tarefa.id)" type="button">Excluir tarefa</button>
+                                <button type="submit">Marcar como realizada</button>
+                                <button  (click)="cancelar()">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            <!-- <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarefa</th>
+                            <th>Início</th>
+                            <th>Término</th>
+                            <th>Status</th>
+                            <th>Alterar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let tarefa of tarefas">
+                            <td>{{tarefa.nomeTarefa}}</td>
+                            <td>{{tarefa.dataInicio}}</td>
+                            <td>{{tarefa.dataTermino}}</td>
+                            <td>{{tarefa.status}}</td>
+                            <td><button (click)="getTarefa(tarefa)">Alterar</button></td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div> -->
+
+
+        </div>
+
+        
+
+
+    </div>
+
+
+
+   
+    <div class="main-container-table">
+        <h2>Tasks</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tarefa</th>
+                        <th>Início</th>
+                        <th>Término</th>
+                        <th>Status</th>
+                        <th>Alterar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tarefa of tarefas">
+                        <td>{{tarefa.nomeTarefa}}</td>
+                        <td>{{formatarData(tarefa.dataInicio)}}</td>
+                        <td>{{formatarData(tarefa.dataTermino)}}</td>
+                        <td>{{tarefa.status}}</td>
+                        <td><button class="button-update" (click)="getTarefa(tarefa)">Alterar</button></td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+    
+    <app-footer></app-footer>

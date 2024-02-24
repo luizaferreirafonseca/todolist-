@@ -1,0 +1,75 @@
+header{
+    padding-top: 35px;
+    
+}
+
+.caixa-navbar{
+    display: flex;
+    justify-content: space-around;
+  
+
+}
+
+
+.caixa-navbar p {
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 550;
+
+}
+
+.menu{
+    color: gray;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 1.2rem;
+
+}
+
+.menu a{
+  color: gray;
+  text-decoration: none;
+}
+
+
+
+.caixa-navbar button{
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .caixa-navbar button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5), transparent 70%);
+      transform: rotate(-30deg);
+      opacity: 0;
+      animation: shine 2s linear infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+

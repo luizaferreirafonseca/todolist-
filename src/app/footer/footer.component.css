@@ -1,0 +1,55 @@
+.caixa-total {
+    background-color: rgb(200, 238, 252);
+    display: flex;
+    padding: 50px;
+    justify-content: space-around;
+    color: gray;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      
+}
+
+
+.menus{
+    display: flex;
+    gap: 80px;
+
+}
+
+.titulo-frase{
+    width: 30%;
+
+}
+
+#taskup{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(30, 30, 30);
+}
+
+ul {
+    list-style: none;
+    
+}
+
+ul li{
+    padding-top: 8px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.menu-item p {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: rgb(30, 30, 30);
+}
+
+#about-i{
+    padding-right: 30px;
+}
