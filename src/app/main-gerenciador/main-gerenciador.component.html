@@ -1,20 +1,17 @@
-
-
-
 <div class="corpo">
-    <app-navbar></app-navbar>
-   
+    <app-navbar [navbarButton]="navbarButton" [navButtonRoute]="route"></app-navbar>
+
 
     <div class="total-content">
 
 
         <div class="imagem-buttons">
-                <img src="/assets/peoplew.png">
-                <div class="buttons">
-                    <button class="botoes_gerenciador">Customize</button>
-                    <button class="botoes_gerenciador">Your profile</button>
-                    <button class="botoes_gerenciador">Ask!</button>    
-                </div>
+            <img src="/assets/peoplew.png">
+            <div class="buttons">
+                <button class="botoes_gerenciador">Customize</button>
+                <button class="botoes_gerenciador">Your profile</button>
+                <button class="botoes_gerenciador">Ask!</button>
+            </div>
         </div>
 
         <div class="formAndtable">
@@ -23,13 +20,13 @@
                 <div class="task-form">
                     <p>Schedule your tasks</p>
                     <form action="#" method="post" [formGroup]="formulario">
-                        <label for="taskName">Nome da Tarefa:</label>
+                        <label for="taskName">Task:</label>
                         <input type="text" formControlName="nomeTarefa" id="taskName" name="taskName" required>
 
-                        <label for="startDate">Data de Início:</label>
+                        <label for="startDate">Start Date:</label>
                         <input type="date" formControlName="dataInicio" id="startDate" name="startDate">
 
-                        <label for="endDate">Data de Término:</label>
+                        <label for="endDate">Due Date:</label>
                         <input type="date" formControlName="dataTermino" id="endDate" name="endDate">
 
                         <!-- <label for="startTime">Horário de Início:</label>
@@ -38,47 +35,49 @@
                         <label for="endTime">Horário de Término:</label>
                         <input type="time" formControlName="dataTermino" id="endTime" name="endTime"> -->
 
-                        <label for="taskDescription">Descrição da Tarefa:</label>
-                        <textarea id="taskDescription" formControlName="descricao" name="taskDescription" rows="3"></textarea>
+                        <label for="taskDescription">Description:</label>
+                        <textarea id="taskDescription" formControlName="descricao" name="taskDescription"
+                            rows="3"></textarea>
 
-                        <button type="submit" (click)="postNewTask()">Criar Tarefa</button>
+                        <button type="submit" (click)="postNewTask()">Create Task</button>
                     </form>
                 </div>
             </div>
 
 
 
-                <div class="total" *ngIf="updateForm">
-                    <div class="task-form">
-                        <p>Edite sua tarefa</p>
-                        <form action="#" method="post" [formGroup]="formulario2">
-                            <label for="taskName">Nome da Tarefa:</label>
-                            <input type="text" formControlName="nomeTarefa" id="taskName" name="taskName" required>
+            <div class="total" *ngIf="updateForm">
+                <div class="task-form">
+                    <p>Update your tasks</p>
+                    <form action="#" method="post" [formGroup]="formulario2">
+                        <label for="taskName">Task:</label>
+                        <input type="text" formControlName="nomeTarefa" id="taskName" name="taskName" required>
 
-                            <label for="startDate">Data de Início:</label>
-                            <input type="date" formControlName="dataInicio" id="startDate" name="startDate">
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" formControlName="dataInicio" id="startDate" name="startDate">
 
-                            <label for="endDate">Data de Término:</label>
-                            <input type="date" formControlName="dataTermino" id="endDate" name="endDate">
+                        <label for="endDate">Due Date:</label>
+                        <input type="date" formControlName="dataTermino" id="endDate" name="endDate">
 
-                            <!-- <label for="startTime">Horário de Início:</label>
+                        <!-- <label for="startTime">Horário de Início:</label>
                             <input type="time" formControlName="dataInicio" id="startTime" name="startTime">
 
                             <label for="endTime">Horário de Término:</label>
                             <input type="time" formControlName="dataTermino" id="endTime" name="endTime"> -->
 
-                            <label for="taskDescription">Descrição da Tarefa:</label>
-                            <textarea id="taskDescription" formControlName="descricao" name="taskDescription" rows="4"></textarea>
-                            
-                            <div class="botoes">
-                                <button>Alterar tarefa</button>
-                                <button (click)="removeTarefa(tarefa.id)" type="button">Excluir tarefa</button>
-                                <button type="submit">Marcar como realizada</button>
-                                <button  (click)="cancelar()">Cancelar</button>
-                            </div>
-                        </form>
-                    </div>
+                        <label for="taskDescription">Description:</label>
+                        <textarea id="taskDescription" formControlName="descricao" name="taskDescription"
+                            rows="4"></textarea>
+
+                        <div class="botoes">
+                            <button (click)="updateTask()">Update</button>
+                            <button (click)="removeTarefa(tarefa.id)" type="button">Remove</button>
+                            <!-- <button type="submit">Marcar como realizada</button> -->
+                            <button (click)="cancelar()">Cancel</button>
+                        </div>
+                    </form>
                 </div>
+            </div>
 
             <!-- <div class="table-container">
                 <table>
@@ -107,14 +106,14 @@
 
         </div>
 
-        
+
 
 
     </div>
 
 
 
-   
+
     <div class="main-container-table">
         <h2>Tasks</h2>
         <div class="table-container">
@@ -136,12 +135,12 @@
                         <td>{{tarefa.status}}</td>
                         <td><button class="button-update" (click)="getTarefa(tarefa)">Alterar</button></td>
                     </tr>
-                
+
                 </tbody>
             </table>
         </div>
     </div>
 
 </div>
-    
-    <app-footer></app-footer>
+
+<app-footer></app-footer>

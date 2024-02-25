@@ -1,5 +1,5 @@
 export interface ITarefa {
-    id: number;
+    id: string;
     nomeTarefa: string;
     dataInicio: Date;
     dataTermino: Date;

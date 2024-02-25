@@ -1,4 +1,4 @@
-.caixa-cinza{
+.caixa-cinza {
     background-color: rgb(242, 243, 241);
     display: flex;
     flex-direction: column;
@@ -7,21 +7,21 @@
     height: 100vh;
 }
 
-.caixa-total{
+.caixa-total {
     background-color: rgb(255, 255, 255);
     width: 80%;
     border-radius: 22px 22px 0 0;
     height: 100%;
     margin-top: 70px;
     font-family: "Poppins", sans-serif;
-        font-weight: 300;
-        font-style: normal;
+    font-weight: 300;
+    font-style: normal;
 
 
 }
 
 
-.caixa-navbar{
+.caixa-navbar {
     display: flex;
     justify-content: space-around;
 
@@ -35,7 +35,7 @@
 
 }
 
-.menu{
+.menu {
     color: gray;
     display: flex;
     justify-content: center;
@@ -45,7 +45,7 @@
 }
 
 
-.caixa-navbar button{
+.caixa-navbar button {
     background: linear-gradient(45deg, #3498db, #2980b9);
     color: #fff;
     padding: 10px 20px;
@@ -57,9 +57,9 @@
     overflow: hidden;
     font-weight: 500;
     margin-bottom: 20px;
-  }
+}
 
-  .caixa-navbar button::before {
+.caixa-navbar button::before {
     content: "";
     position: absolute;
     top: -50%;
@@ -67,63 +67,65 @@
     width: 200%;
     height: 200%;
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5), transparent 70%);
-      transform: rotate(-30deg);
-      opacity: 0;
-      animation: shine 2s linear infinite;
+    transform: rotate(-30deg);
+    opacity: 0;
+    animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
     }
 
-    @keyframes shine {
-      0% {
-        opacity: 0;
-      }
-      50% {
+    50% {
         opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
     }
 
+    100% {
+        opacity: 0;
+    }
+}
 
 
 
 
 
-header{
+
+header {
     padding-top: 35px;
 }
 
-.caixa-conteudo{
+.caixa-conteudo {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    
-    
-   
+
+
+
 }
 
-.textos{
+.textos {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-left: 60px;
-   
+
 
 }
 
 
-.textos h1{
+.textos h1 {
     font-size: 3.0rem;
 }
 
 
-.botoes{
+.botoes {
     display: flex;
     gap: 25px;
-    
+
 }
 
-.btn-1{
+.btn-1 {
     background: linear-gradient(45deg, #3498db, #2980b9);
     color: #fff;
     padding: 10px 20px;
@@ -134,7 +136,7 @@ header{
     position: relative;
     overflow: hidden;
     font-weight: 500;
-    
+
 }
 
 .btn-1::before {
@@ -145,31 +147,33 @@ header{
     width: 200%;
     height: 200%;
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5), transparent 70%);
-   
-      opacity: 0;
-      
-    }
 
-    .play-button {
-        width: 40px;
-        height: 40px;
-        background-color: #ffffff;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff; /* Cor do ícone */
-        font-size: 17px;
-        border: none;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.5); /* Sombra azul */
-      }
+    opacity: 0;
+
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    /* Cor do ícone */
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.5);
+    /* Sombra azul */
+}
 
 
 
 
 
-.btn-2{
+.btn-2 {
     background-color: rgb(223, 221, 221);
     border-radius: 4px;
     color: black;
@@ -177,12 +181,12 @@ header{
 }
 
 
-.video{
+.video {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    
+
 }
 
 
@@ -194,18 +198,18 @@ header{
     
 } */
 
-.titulo{
+.titulo {
     width: 80%;
 }
 
-.texto{
+.texto {
     width: 450px;
     color: gray;
     letter-spacing: 0.8px;
 }
 
 
-.girl{
+.girl {
     width: 37%;
 }
 

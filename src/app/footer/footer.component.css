@@ -37,6 +37,11 @@ ul li{
     padding-top: 8px;
 }
 
+ul li:hover{
+    color: rgb(13, 13, 176);
+    cursor: pointer;
+}
+
 .menu-item {
     display: flex;
     flex-direction: column;
