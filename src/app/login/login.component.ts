@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Router } from '@angular/router';
 
@@ -17,8 +17,8 @@ export class LoginComponent {
 
   constructor(private router: Router) {
     this.loginForm = new FormGroup({
-      email: new FormControl(''),
-      senha: new FormControl('')
+      email: new FormControl('', [Validators.required, Validators.email]),
+      senha: new FormControl('', [Validators.required, Validators.minLength(6)])
     });
 
     
@@ -30,7 +30,7 @@ export class LoginComponent {
     const senha = this.loginForm.get('senha')?.value;
 
     
-    if (email === 'luiza@gmail.com' && senha === '123456') {
+    if (email === 'admin@gmail.com' && senha === '123456') {
       
         this.router.navigate(['/gerenciador']);
     } else {

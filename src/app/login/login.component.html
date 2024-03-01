@@ -16,16 +16,20 @@
             <form [formGroup]="loginForm" class="formulario">
                 <div class="email">
                     <label>E-mail</label>
-                    <input type="email" formControlName="email" placeholder="Digite seu email" required>
+                    <input type="email" formControlName="email" placeholder="Write your email" required>
+                    <p *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')" class="error">Enter a name.</p>
+                    <p *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('email')" class="error">Enter a valid email.</p>
                 </div>
 
                 <div class="senha">
                     <label>Password</label>
                     <input type="password" placeholder="**********" formControlName="senha">
+                    <p *ngIf="loginForm.get('senha')?.touched && loginForm.get('senha')?.hasError('required')" class="error">Enter a password.</p>
+                    <p *ngIf="loginForm.get('senha')?.touched && loginForm.get('senha')?.hasError('minlength')" class="error">Password must have 6 numbers.</p>
                 </div>
 
 
-                <p><u>Forgot my password</u></p>
+                <p class="forgotpassword"><u>Forgot my password</u></p>
 
 
                 <button (click)="onSubmit()" type="submit">Sign in</button>

@@ -9,8 +9,8 @@ import { ITarefaDTO } from '../Models/TarefaDTO';
 })
 export class TarefaService {
 
-  private url: string = 'https://localhost:7066';
-
+ // private url: string = 'https://localhost:7066';
+  private url: string = 'https://apito-dolist20240229074252.azurewebsites.net';
 
   constructor(private http: HttpClient) { }
 

@@ -135,6 +135,8 @@ export class MainGerenciadorComponent {
       .subscribe(tarefaEditada => {
         const index = this.tarefas.findIndex(tarefa => tarefa.id === tarefaEditada.id)
         this.tarefas[index] = tarefaEditada
+
+        this.formulario2.reset();
       })
   }
 
@@ -160,6 +162,7 @@ export class MainGerenciadorComponent {
     this.service.deleteTask(id)
       .subscribe(tarefas => {
         this.tarefas = tarefas;
+        this.formulario2.reset(); 
       })
   }
 
