@@ -1,27 +1,24 @@
-# Todolist
+## TO-DO LIST em Angular e C#
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+## Descrição
 
-## Development server
+Este é um projeto de gerenciador de tarefas desenvolvido com uma API em C# para o backend e Angular para o frontend. O objetivo desta aplicação é permitir que os usuários gerenciem suas tarefas de forma eficiente, incluindo adição, exclusão e atualização de tarefas, além de acompanhar o status das mesmas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias utilizadas
 
-## Code scaffolding
+* Backend (API em C#)
+  -> ASP.NET Core: Framework utilizado para construir a API RESTful.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Frontend (Angular)
+  -> Angular: Framework de desenvolvimento front-end baseado em TypeScript.
+  -> Reactive Forms Module: Módulo do Angular utilizado para criação e validação de formulários.
+  -> Componentização: Componentes foram utilizados para estruturar a aplicação em partes reutilizáveis.
+  -> Guards: Implementado para proteger rotas na aplicação, embora ainda não totalmente implementado.
+  -> Input/Output: Utilizado para a comunicação entre componentes.
 
-## Build
+## Funcionalidades
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* Adicionar uma nova tarefa ao quadro de tarefas.
+* Deletar tarefas existentes.
+* Atualizar o status das tarefas (pendente, em atraso, em andamento).
+  
