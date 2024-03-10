@@ -184,46 +184,4 @@ export class MainGerenciadorComponent {
 
 
 
-  // updateTarefa(id:string, tarefaParaEditar: ITarefaDTO): void{
-  //   this.service.editarTarefa(id, tarefaParaEditar)
-  //   .subscribe((tarefaEditada: ITarefa) => {
-  //     console.log('Tarefa editada', tarefaEditada)
-  //   });
-  // }
-
-  // updateTarefa(id:number, obj:ITarefaDTO):void{
-  //   this.service.editarTarefa(id, obj)
-  //   .subscribe(tarefa => {
-  //     this.tarefa = tarefa;
-
-
-  //   })
-  // }
-
-  // updateTarefa(id: number, obj: ITarefa): void {
-  //   this.service.editarTarefa(id, obj)
-  //     .subscribe(tarefaEditada => {
-  //       const indexTarefa = this.tarefas.findIndex(tarefa => tarefa.id === id);
-
-  //       if (indexTarefa !== -1) {
-  //         // Atualiza a tarefa na lista
-  //         this.tarefas[indexTarefa] = tarefaEditada;
-  //       }
-  //     });
-  // }
-
-
-  // updateTarefa(id:string, tarefaParaEditar: ITarefaDTO): void{
-  //   this.service.editarTarefa(id, tarefaParaEditar)
-  //   .subscribe((tarefaEditada: ITarefa) => {
-  //     console.log('Tarefa editada', tarefaEditada)
-  //   });
-  // }
-
-
-}
-
-
-//updateTarefa():void{
-//   this.service.editarTarefa(this.tarefa.id, this.formulario.value as ITarefaDTO)
-//    .subscribe
+  
