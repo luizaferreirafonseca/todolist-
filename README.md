@@ -7,13 +7,19 @@ Este é um projeto de gerenciador de tarefas desenvolvido com uma API em C# para
 ## Tecnologias utilizadas
 
 * Backend (API em C#)
+  
   -> ASP.NET Core: Framework utilizado para construir a API RESTful.
 
 * Frontend (Angular)
+  
   -> Angular: Framework de desenvolvimento front-end baseado em TypeScript.
+  
   -> Reactive Forms Module: Módulo do Angular utilizado para criação e validação de formulários.
+  
   -> Componentização: Componentes foram utilizados para estruturar a aplicação em partes reutilizáveis.
+  
   -> Guards: Implementado para proteger rotas na aplicação, embora ainda não totalmente implementado.
+  
   -> Input/Output: Utilizado para a comunicação entre componentes.
 
 ## Funcionalidades
